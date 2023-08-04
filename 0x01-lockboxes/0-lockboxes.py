@@ -6,18 +6,15 @@
 
 def canUnlockAll(boxes):
     """Method that determines if all the boxes can be opened"""
-    def exploreBox(boxIndex, visited):
-        """Explore a box and mark all the boxes that can be opened"""
-        if visited[boxIndex]:
-            return
-        visited[boxIndex] = True
-
-        for key in boxes[boxIndex]:
-            if 0 <= key < len(boxes):
-                exploreBox(key, visited)
-
     n = len(boxes)
     visited = [False] * n
-    exploreBox(0, visited)
+    visited[0] = True
+    pile = [0]
 
+    while pile:
+        actualBox = pile.pop()
+        for key in boxes[actualBox]:
+            if 0 <= key < n and not visited[key]:
+                visited[key] = True
+                pile.append(key)
     return all(visited)
