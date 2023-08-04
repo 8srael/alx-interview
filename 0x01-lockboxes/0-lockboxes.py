@@ -4,7 +4,7 @@
 """
 
 
-def canUnlockAll3(boxes):
+def canUnlockAll(boxes):
     """Method that determines if all the boxes can be opened"""
     def exploreBox(boxIndex, visited):
         """Explore a box and mark all the boxes that can be opened"""
