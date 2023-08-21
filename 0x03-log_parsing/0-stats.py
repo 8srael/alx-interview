@@ -3,7 +3,6 @@
     Task 0. Log Parsing
     A script for parsing HTTP request logs.
 """
-
 import re
 
 
@@ -38,6 +37,7 @@ def print_statistics(file_size, status_codes_stats):
         num = status_codes_stats.get(status_code, 0)
         if num > 0:
             print("{}: {}".format(status_code, num), flush=True)
+
 
 def update_metrics(line, total_file_size, status_codes_stats):
     '''Updates the metrics from a given HTTP request log.
@@ -87,3 +87,4 @@ def run():
 
 if __name__ == '__main__':
     run()
+
