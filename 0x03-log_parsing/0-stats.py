@@ -3,7 +3,6 @@
     Task 0. Log Parsing
     A script for parsing HTTP request logs.
 """
-
 import re
 
 
@@ -88,3 +87,4 @@ def run():
 
 if __name__ == '__main__':
     run()
+
