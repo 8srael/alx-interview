@@ -39,6 +39,7 @@ def print_statistics(file_size, status_codes_stats):
         if num > 0:
             print("{}: {}".format(status_code, num), flush=True)
 
+
 def update_metrics(line, total_file_size, status_codes_stats):
     '''Updates the metrics from a given HTTP request log.
 
