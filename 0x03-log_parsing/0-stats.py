@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
     Task 0. Log Parsing
     A script for parsing HTTP request logs.
