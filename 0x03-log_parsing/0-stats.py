@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
+"""
+    Task 0. Log Parsing
+    A script for parsing HTTP request logs.
+"""
 
-"""Task 0. Log Parsing"""
-
-import re
-
-
-#!/usr/bin/python3
-'''A script for parsing HTTP request logs.
-'''
 import re
 
 
@@ -39,19 +35,9 @@ def print_statistics(file_size, status_codes_stats):
     """Prints the stats"""
     print("File size: {}".format(file_size))
     for status_code in sorted(status_codes_stats.keys()):
-        num = status_codes.get(status_code, 0)
+        num = status_codes_stats.get(status_code, 0)
         if num > 0:
             print("{}: {}".format(status_code, num), flush=True)
-
-# def print_statistics(total_file_size, status_codes_stats):
-#     '''Prints the accumulated statistics of the HTTP request log.
-#     '''
-#     print('File size: {:d}'.format(total_file_size), flush=True)
-#     for status_code in sorted(status_codes_stats.keys()):
-#         num = status_codes_stats.get(status_code, 0)
-#         if num > 0:
-#             print('{:s}: {:d}'.format(status_code, num), flush=True)
-
 
 def update_metrics(line, total_file_size, status_codes_stats):
     '''Updates the metrics from a given HTTP request log.
