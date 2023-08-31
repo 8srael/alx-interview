@@ -5,6 +5,10 @@
 import sys
 
 
+solutions = []
+n = 0
+
+
 def solveNQueens(n):
     """return all possible solutions
     to the N queens problem
