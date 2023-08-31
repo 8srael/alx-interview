@@ -18,7 +18,7 @@ def solveNQueens(n: int) -> List[List[str]]:
 
     def backtrack(r):
         if r == n:
-            res.append([[r, c] for r in range(n) for c in range(n) \
+            res.append([[r, c] for r in range(n) for c in range(n)
                     if board[r][c] == 'Q'])
             return
         for c in range(n):
