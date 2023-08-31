@@ -7,9 +7,12 @@ import sys
 
 
 def solveNQueens(n: int) -> List[List[str]]:
+    """return all possible solutions
+    to the N queens problem
+    """
     col = set()
-    posDiag = set() # (row + col)
-    negDiag = set() # (row - col)
+    posDiag = set()
+    negDiag = set()
     
     res = []
     board = [['.'] * n for _ in range(n)]
@@ -19,25 +22,21 @@ def solveNQueens(n: int) -> List[List[str]]:
             res.append([[r,c] for r in range(n) for c in range(n) \
                 if board[r][c] == 'Q'])
             return
-
         for c in range(n):
             if c in col or (r + c) in posDiag or (r - c) in negDiag:
-                continue
-            
+                continue 
             col.add(c)
             posDiag.add(r + c)
             negDiag.add(r - c)
-
             board[r][c] = 'Q'
-        
             backtrack(r + 1)
-
             col.remove(c)
             posDiag.remove(r + c)
             negDiag.remove(r - c)
             board[r][c] = '.'
     backtrack(0)
     return res
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
