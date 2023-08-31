@@ -19,7 +19,7 @@ def solveNQueens(n: int) -> List[List[str]]:
     def backtrack(r):
         if r == n:
             res.append([[r, c] for r in range(n) for c in range(n)
-                    if board[r][c] == 'Q'])
+                        if board[r][c] == 'Q'])
             return
         for c in range(n):
             if c in col or (r + c) in posDiag or (r - c) in negDiag:
