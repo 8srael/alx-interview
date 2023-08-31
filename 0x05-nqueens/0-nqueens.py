@@ -5,7 +5,7 @@
 import sys
 
 
-def solveNQueens(n) -> list:
+def solveNQueens(n):
     """return all possible solutions
     to the N queens problem
     """
@@ -36,19 +36,29 @@ def solveNQueens(n) -> list:
     return res
 
 
-if __name__ == "__main__":
+def get_input():
+    """ Validate program args
+
+        Returns:
+            int: the size of the chessboard
+    """
+
+    n = 0
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
-        exit(1)
-
-    if not sys.argv[1].isdigit():
+        sys.exit(1)
+    try:
+        n = int(sys.argv[1])
+    except ValueError:
         print("N must be a number")
-        exit(1)
-
-    if int(sys.argv[1]) < 4:
+        sys.exit(1)
+    if n < 4:
         print("N must be at least 4")
-        exit(1)
+        sys.exit(1)
+    return n
 
-    solutions = solveNQueens(int(sys.argv[1]))
-    for case in solutions:
-        print(case)
+
+n = get_input()
+solutions = solveNQueens(n)
+for case in solutions:
+    print(case)
