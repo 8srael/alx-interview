@@ -2,11 +2,10 @@
 
 """N queens problem"""
 
-from typing import List
 import sys
 
 
-def solveNQueens(n: int) -> List[List[str]]:
+def solveNQueens(n) -> list:
     """return all possible solutions
     to the N queens problem
     """
