@@ -9,3 +9,4 @@ This repository contains these following directories:
 3. [0x03. Log Parsing](https://github.com/8srael/alx-interview/tree/master/0x03-log_parsing)
 4. [0x04. UTF-8 Validation](https://github.com/8srael/alx-interview/tree/master/0x04-utf8_validation)
 5. [0x05. N Queens](https://github.com/8srael/alx-interview/tree/master/0x05-nqueens)
+6. [0x06. Star Wars API](https://github.com/8srael/alx-interview/tree/master/0x06-starwars_api)
