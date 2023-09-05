@@ -1,0 +1,7 @@
+{
+    "dependencies": {
+        "request": "^2.26.0",
+        "semistandard": "17.0.0"
+    }
+}
+
