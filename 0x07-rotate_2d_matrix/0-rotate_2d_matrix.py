@@ -2,7 +2,6 @@
 
 """ Rotate 2D Matrix module """
 
-
 from typing import List
 
 
