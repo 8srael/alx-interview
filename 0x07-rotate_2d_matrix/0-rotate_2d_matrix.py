@@ -2,10 +2,8 @@
 
 """ Rotate 2D Matrix module """
 
-from typing import List
 
-
-def transpose(matrix: List[List[int]]) -> None:
+def transpose(matrix):
     """ transpose n * n matrix """
     n = len(matrix)
     for i in range(n):
@@ -13,7 +11,7 @@ def transpose(matrix: List[List[int]]) -> None:
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
 
-def reverseRow(matrix: List[List[int]]) -> None:
+def reverseRow(matrix):
     """ Reverse matrice rows """
     i = j = row = 0
     n = len(matrix)
@@ -27,7 +25,7 @@ def reverseRow(matrix: List[List[int]]) -> None:
         row += 1
 
 
-def rotate_2d_matrix(matrix: List[List[int]]):
+def rotate_2d_matrix(matrix):
     """ Given an n x n 2D matrix, rotate it 90 degrees clockwise. """
     transpose(matrix)
     reverseRow(matrix)
