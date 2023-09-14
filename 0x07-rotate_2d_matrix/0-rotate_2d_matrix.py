@@ -32,8 +32,3 @@ def rotate_2d_matrix(matrix: List[List[int]]):
     """ Given an n x n 2D matrix, rotate it 90 degrees clockwise. """
     transpose(matrix)
     reverseRow(matrix)
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> f3db6b6b01f8c169ce3428970a9ab04e76f0bafe
