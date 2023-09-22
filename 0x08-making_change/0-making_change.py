@@ -4,18 +4,20 @@
 
 
 def makeChange(coins, total):
-    """ Create table and initialize"""
-    dp = [float('inf')]*(total + 1)
+    """
+        determines the fewest number of coins needed
+        to meet a given amount total.
+    """
 
-    # number of coins to have 0
+    if total == 0:
+        return 0
+ 
+    dp = [float('inf')] * (total + 1)
     dp[0] = 0
 
-    # boucle from 1 to total
     for i in range(1, total + 1):
-        # browse all coins
-        for coin in coins:
-            if coin <= i:
-                dp[i] = min(dp[i], dp[i - coin] + 1)
+        for c in coins:
+            if i - c >= 0:
+                dp[i] = min(dp[i], 1 + dp[i - c])
 
     return dp[total] if dp[total] != float('inf') else -1
-
