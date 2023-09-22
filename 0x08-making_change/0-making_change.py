@@ -9,7 +9,7 @@ def makeChange(coins, total):
         to meet a given amount total.
     """
 
-    if total == 0:
+    if total <= 0:
         return 0
 
     dp = [float('inf')] * (total + 1)
