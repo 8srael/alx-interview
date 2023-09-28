@@ -10,7 +10,6 @@ def island_perimeter(grid):
     visited = set()
     row = len(grid)
     col = len(grid[0])
-    print(f"Size : {(row, col)}")
 
     def dfs(i, j):
         if i < 0 or j < 0 or i >= row or j >= col or grid[i][j] == 0:
