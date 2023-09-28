@@ -7,12 +7,11 @@ def island_perimeter(grid):
     """
         Returns the perimeter of the island described in grid
     """
-    if type(grid) is not list or len(grid) == 0:
-        return 0
 
     visited = set()
     row = len(grid)
     col = len(grid[0])
+    perimeter = 0
 
     def dfs(i, j):
         if i < 0 or j < 0 or i >= row or j >= col or grid[i][j] == 0:
@@ -22,7 +21,11 @@ def island_perimeter(grid):
             return 0
 
         visited.add((i, j))
-        return dfs(i + 1, j) + dfs(i, j + 1) + dfs(i - 1, j) + dfs(i, j - 1)
+        perimeter = dfs(i + 1, j)
+        perimeter += dfs(i, j + 1)
+        perimeter += dfs(i - 1, j)
+        perimeter += dfs(i, j - 1)
+        return perimeter
 
     for i in range(row):
         for j in range(col):
