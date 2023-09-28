@@ -1,29 +1,24 @@
 #!/usr/bin/python3
-
 """ Task 0. Island Perimeter """
 
 
 def island_perimeter(grid):
+    """Computes the perimeter of an island with no lakes.
     """
-        Returns the perimeter of the island described in grid
-    """
-    row = len(grid)
-    col = len(grid[0])
-
-    visited = [[0 for x in range(col)] for y in range(row)]
-
-    def dfs(i, j):
-        """Depth first search method"""
-        if i < 0 or i > row-1 or j < 0 or j > col-1 or grid[i][j] == 0:
-            return 1
-
-        if visited[i][j]:
-            return 0
-        visited[i][j] = 1
-
-        return dfs(i-1, j) + dfs(i+1, j) + dfs(i, j+1) + dfs(i, j-1)
-
-    for x in range(row):
-        for y in range(col):
-            if grid[x][y] == 1:
-                return dfs(x, y)
+    perimeter = 0
+    if type(grid) != list:
+        return 0
+    n = len(grid)
+    for i, row in enumerate(grid):
+        m = len(row)
+        for j, cell in enumerate(row):
+            if cell == 0:
+                continue
+            edges = (
+                i == 0 or (len(grid[i - 1]) > j and grid[i - 1][j] == 0),
+                j == m - 1 or (m > j + 1 and row[j + 1] == 0),
+                i == n - 1 or (len(grid[i + 1]) > j and grid[i + 1][j] == 0),
+                j == 0 or row[j - 1] == 0,
+            )
+            perimeter += sum(edges)
+    return perimeter
