@@ -11,7 +11,7 @@ def island_perimeter(grid):
     col = len(grid[0])
 
     visited = [[0 for x in range(col)] for y in range(row)]
- 
+
     def dfs(i, j):
         """Depth first search method"""
         if i < 0 or i > row-1 or j < 0 or j > col-1 or grid[i][j] == 0:
