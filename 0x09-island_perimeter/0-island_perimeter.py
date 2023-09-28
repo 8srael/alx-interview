@@ -2,6 +2,7 @@
 
 """ Task 0. Island Perimeter """
 
+
 def island_perimeter(grid):
     """
         Returns the perimeter of the island described in grid
@@ -24,4 +25,4 @@ def island_perimeter(grid):
     for i in range(row):
         for j in range(col):
             if(grid[i][j] == 1):
-                return dfs(i, j) 
+                return dfs(i, j)
