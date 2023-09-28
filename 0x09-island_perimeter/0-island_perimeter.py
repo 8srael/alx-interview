@@ -7,6 +7,9 @@ def island_perimeter(grid):
     """
         Returns the perimeter of the island described in grid
     """
+    if type(grid) is not list or len(grid) == 0:
+        return 0
+
     visited = set()
     row = len(grid)
     col = len(grid[0])
