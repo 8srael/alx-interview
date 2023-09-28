@@ -7,15 +7,12 @@ def island_perimeter(grid):
     """
         Returns the perimeter of the island described in grid
     """
-
-    if type(grid) != list:
-        return 0
-
     visited = set()
     row = len(grid)
     col = len(grid[0])
 
     def dfs(i, j):
+        """depth first search method recursive method"""
         if i < 0 or j < 0 or i >= row or j >= col or grid[i][j] == 0:
             return 1
         if (i, j) in visited:
@@ -28,3 +25,4 @@ def island_perimeter(grid):
         for j in range(col):
             if(grid[i][j] == 1):
                 return dfs(i, j)
+    
