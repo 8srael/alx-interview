@@ -15,10 +15,19 @@ def dfs(grid, i, j, visited):
         return 0
 
     visited.add((i, j))
+<<<<<<< HEAD
     return dfs(grid, i + 1, j, visited) + \
          dfs(grid, i, j + 1, visited) + \
          dfs(grid, i - 1, j, visited) + \
          dfs(grid, i, j - 1, visited)
+=======
+    return (
+        dfs(grid, i + 1, j, visited) +
+        dfs(grid, i, j + 1, visited) +
+        dfs(grid, i - 1, j, visited) +
+        dfs(grid, i, j - 1, visited)
+    )
+>>>>>>> fed2b7a73518702b475fce0eb251b217523d66de
 
 
 def island_perimeter(grid):
