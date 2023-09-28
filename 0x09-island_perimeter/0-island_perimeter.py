@@ -7,7 +7,7 @@ def island_perimeter(grid):
     """
         Returns the perimeter of the island described in grid
     """
-    visited  = set()
+    visited = set()
     row = len(grid)
     col = len(grid[0])
     print(f"Size : {(row, col)}")
