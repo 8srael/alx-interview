@@ -21,7 +21,7 @@ def island_perimeter(grid):
         visited.add((i, j))
         return dfs(i + 1, j) + dfs(i, j + 1) + dfs(i - 1, j) + dfs(i, j - 1)
 
-    def sum(grid):
+    def sum_of_all_1(grid):
         """sum of all 1's in grid"""
         s = 0
         for i in range(row):
@@ -30,7 +30,7 @@ def island_perimeter(grid):
                     s += 1
         return s
 
-    if sum(grid) == 0:
+    if sum_of_all_1(grid) == 0:
         return 0
     for i in range(row):
         for j in range(col):
