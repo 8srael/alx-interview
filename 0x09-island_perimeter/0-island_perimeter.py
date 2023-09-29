@@ -6,6 +6,7 @@ def island_perimeter(grid):
     """
         Returns the perimeter of the island described in grid
     """
+
     visited = set()
     row = len(grid)
     col = len(grid[0])
@@ -20,6 +21,17 @@ def island_perimeter(grid):
         visited.add((i, j))
         return dfs(i + 1, j) + dfs(i, j + 1) + dfs(i - 1, j) + dfs(i, j - 1)
 
+    def sum(grid):
+        """sum of all 1's in grid"""
+        s = 0
+        for i in range(row):
+            for j in range(col):
+                if grid[i][j] == 1:
+                    s += 1
+        return s
+
+    if sum(grid) == 0:
+        return 0
     for i in range(row):
         for j in range(col):
             if grid[i][j] == 1:
