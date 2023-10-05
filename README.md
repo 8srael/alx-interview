@@ -13,3 +13,4 @@ This repository contains these following directories:
 7. [0x07. Rotate 2D Matrix](https://github.com/8srael/alx-interview/tree/master/0x07-rotate_2d_matrix)
 8. [0x08. Making Change](https://github.com/8srael/alx-interview/tree/master/0x08-making_change)
 9. [0x09. Island Perimeter](https://github.com/8srael/alx-interview/tree/master/0x09-island_perimeter)
+10. [0x0A. Prime Game](https://github.com/8srael/alx-interview/tree/master/0x0A-primegame)
