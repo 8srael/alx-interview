@@ -12,6 +12,7 @@ def is_prime(number):
             return False
     return True
 
+
 def maria_vs_ben(n):
     """Determines if Maria or Ben wins after a turn"""
     prime_count = 0
@@ -19,6 +20,7 @@ def maria_vs_ben(n):
         if is_prime(i):
             prime_count += 1
     return prime_count % 2 == 1
+
 
 def isWinner(x, nums):
     """Returns the name of the player that won the most rounds"""
@@ -37,3 +39,4 @@ def isWinner(x, nums):
         return "Ben"
     else:
         return None
+
