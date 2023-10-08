@@ -25,7 +25,7 @@ def maria_vs_ben(n):
 def isWinner(x, nums):
     """Returns the name of the player that won the most rounds"""
 
-    if x < 1 or x > 10000:
+    if x < 1 or x >= 10000:
         return None
 
     maria_wins = 0
