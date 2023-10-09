@@ -15,8 +15,6 @@ def is_prime(number):
 
 def maria_vs_ben(n):
     """Determines if Maria or Ben wins after a turn"""
-    if n > 10000:
-        return None
     prime_count = 0
     for i in range(2, n + 1):
         if is_prime(i):
