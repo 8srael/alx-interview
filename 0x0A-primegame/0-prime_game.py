@@ -15,6 +15,8 @@ def is_prime(number):
 
 def maria_vs_ben(n):
     """Determines if Maria or Ben wins after a turn"""
+    if n > 10000:
+        return None
     prime_count = 0
     for i in range(2, n + 1):
         if is_prime(i):
@@ -25,7 +27,7 @@ def maria_vs_ben(n):
 def isWinner(x, nums):
     """Returns the name of the player that won the most rounds"""
 
-    if x < 1 or x >= 10000 or len(nums) < 1 or len(nums) >= 10000:
+    if x < 1 or x >= 10000:
         return None
 
     maria_wins = 0
